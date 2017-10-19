@@ -11,6 +11,7 @@
   "TAB1_TITLE": "Items",
   "TAB2_TITLE": "Search",
   "TAB3_TITLE": "Settings",
+  "TAB4_TITLE": "Profile",
 
   "MAP_TITLE": "Map",
 
@@ -23,10 +24,7 @@
   "TUTORIAL_SLIDE2_TITLE": "How to use the Super Starter",
   "TUTORIAL_SLIDE2_DESCRIPTION": "Assemble the various page types you want and remove the ones you don't. We've provided many common mobile app page layouts, like login and signup pages, tabs, and this tutorial page.",
 
-  "TUTORIAL_SLIDE3_TITLE": "Getting Started",
-  "TUTORIAL_SLIDE3_DESCRIPTION": "Need help? Check out the Super Starter README for a full tutorial",
-
-  "TUTORIAL_SLIDE4_TITLE": "Ready to Play?",
+  "TUTORIAL_SLIDE3_TITLE": "Ready to Play?",
 
   "WELCOME_INTRO": "The starting point for your next great Ionic app",
 

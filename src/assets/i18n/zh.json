@@ -8,27 +8,25 @@
   "LOGIN": "登录",
   "SIGNUP": "注册",
 
-  "TAB1_TITLE": "文章",
-  "TAB2_TITLE": "搜索",
-  "TAB3_TITLE": "设置",
+  "TAB1_TITLE": "发现",
+  "TAB2_TITLE": "话题",
+  "TAB3_TITLE": "发起",
+  "TAB4_TITLE": "我的",
 
   "MAP_TITLE": "地址",
 
   "TUTORIAL_SKIP_BUTTON": "跳过",
   "TUTORIAL_CONTINUE_BUTTON": "继续",
 
-  "TUTORIAL_SLIDE1_TITLE": "Welcome to the Ionic Super Starter",
-  "TUTORIAL_SLIDE1_DESCRIPTION": "The <b>Ionic Super Starter</b> is a fully-featured Ionic starter with many pre-built pages and best practices.",
+  "TUTORIAL_SLIDE1_TITLE": "欢迎加入Spring4All社区",
+  "TUTORIAL_SLIDE1_DESCRIPTION": "Spring For All 玩最纯粹的技术！做最专业的 Spring 民间组织~",
 
-  "TUTORIAL_SLIDE2_TITLE": "How to use the Super Starter",
-  "TUTORIAL_SLIDE2_DESCRIPTION": "Assemble the various page types you want and remove the ones you don't. We've provided many common mobile app page layouts, like login and signup pages, tabs, and this tutorial page.",
+  "TUTORIAL_SLIDE2_TITLE": "Spring For All，关于Spring 的一切",
+  "TUTORIAL_SLIDE2_DESCRIPTION": "我们专注于研究、分享、交流关于Spring的一切!",
 
-  "TUTORIAL_SLIDE3_TITLE": "Getting Started",
-  "TUTORIAL_SLIDE3_DESCRIPTION": "Need help? Check out the Super Starter README for a full tutorial",
+  "TUTORIAL_SLIDE3_TITLE": "开始社区之旅",
 
-  "TUTORIAL_SLIDE4_TITLE": "Ready to Play?",
-
-  "WELCOME_INTRO": "The starting point for your next great Ionic app",
+  "WELCOME_INTRO": "Spring4All社区",
 
   "SETTINGS_TITLE": "设置",
   "SETTINGS_OPTION1": "Option 1",
@@ -49,7 +47,7 @@
   "SIGNUP_ERROR": "注册失败，请检查您的填写信息",
   "SIGNUP_BUTTON": "注册",
 
-  "LIST_MASTER_TITLE": "选项卡",
+  "LIST_MASTER_TITLE": "发现",
 
   "ITEM_CREATE_TITLE": "新建",
   "ITEM_CREATE_CHOOSE_IMAGE": "添加",
