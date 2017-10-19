@@ -1,0 +1,68 @@
+{
+  "BACK_BUTTON_TEXT": "返回",
+
+  "NAME": "姓名",
+  "EMAIL": "邮箱",
+  "USERNAME": "用户名",
+  "PASSWORD": "密码",
+  "LOGIN": "登录",
+  "SIGNUP": "注册",
+
+  "TAB1_TITLE": "文章",
+  "TAB2_TITLE": "搜索",
+  "TAB3_TITLE": "设置",
+
+  "MAP_TITLE": "地址",
+
+  "TUTORIAL_SKIP_BUTTON": "跳过",
+  "TUTORIAL_CONTINUE_BUTTON": "继续",
+
+  "TUTORIAL_SLIDE1_TITLE": "Welcome to the Ionic Super Starter",
+  "TUTORIAL_SLIDE1_DESCRIPTION": "The <b>Ionic Super Starter</b> is a fully-featured Ionic starter with many pre-built pages and best practices.",
+
+  "TUTORIAL_SLIDE2_TITLE": "How to use the Super Starter",
+  "TUTORIAL_SLIDE2_DESCRIPTION": "Assemble the various page types you want and remove the ones you don't. We've provided many common mobile app page layouts, like login and signup pages, tabs, and this tutorial page.",
+
+  "TUTORIAL_SLIDE3_TITLE": "Getting Started",
+  "TUTORIAL_SLIDE3_DESCRIPTION": "Need help? Check out the Super Starter README for a full tutorial",
+
+  "TUTORIAL_SLIDE4_TITLE": "Ready to Play?",
+
+  "WELCOME_INTRO": "The starting point for your next great Ionic app",
+
+  "SETTINGS_TITLE": "设置",
+  "SETTINGS_OPTION1": "Option 1",
+  "SETTINGS_OPTION2": "Option 2",
+  "SETTINGS_OPTION3": "Option 3",
+  "SETTINGS_OPTION4": "Option 4",
+
+  "SETTINGS_PROFILE_BUTTON": "编辑信息",
+
+  "SETTINGS_PAGE_PROFILE": "编辑信息",
+
+  "WELCOME_TITLE": "欢迎",
+
+  "LOGIN_TITLE": "登录",
+  "LOGIN_ERROR": "登录失败，请检查您的账户后重试",
+  "LOGIN_BUTTON": "登录",
+  "SIGNUP_TITLE": "注册",
+  "SIGNUP_ERROR": "注册失败，请检查您的填写信息",
+  "SIGNUP_BUTTON": "注册",
+
+  "LIST_MASTER_TITLE": "选项卡",
+
+  "ITEM_CREATE_TITLE": "新建",
+  "ITEM_CREATE_CHOOSE_IMAGE": "添加",
+
+  "ITEM_NAME_PLACEHOLDER": "姓名",
+  "ITEM_ABOUT_PLACEHOLDER": "关于我",
+
+  "DONE_BUTTON": "完成",
+  "CANCEL_BUTTON": "取消",
+  "DELETE_BUTTON": "删除",
+
+  "CARDS_TITLE": "社交",
+
+  "SEARCH_TITLE": "搜索",
+  "SEARCH_PLACEHOLDER": "搜索一下吧"
+}
