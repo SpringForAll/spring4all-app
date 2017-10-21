@@ -50,7 +50,11 @@ export function provideSettings(storage: Storage) {
         deps: [HttpClient]
       }
     }),
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp, {
+      backButtonText: '',
+      iconMode: 'ios',
+      mode: 'ios',
+    }),
     IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],

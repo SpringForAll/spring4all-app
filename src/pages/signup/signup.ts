@@ -45,7 +45,7 @@ export class SignupPage {
       let toast = this.toastCtrl.create({
         message: this.signupErrorString,
         duration: 3000,
-        position: 'top'
+        position: 'middle'
       });
       toast.present();
     });
