@@ -1,0 +1,39 @@
+page-login {
+  .splash-bg {
+    background: url('../../assets/img/splashbg.png');
+  }
+
+  .sign-up{
+    padding-top: 30%;
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .item{
+    color: #FFFFFF;
+    background: transparent
+  }
+
+  @keyframes animatedBackground {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: 100% 0;
+    }
+  }
+
+  button {
+    opacity: 0.8;
+  }
+
+  .login-footer{
+    a:first-child{
+      margin-left: 10%;
+    }
+    a:last-child{
+      margin-left: 50%;
+    }
+  }
+
+}

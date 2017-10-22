@@ -1,0 +1,24 @@
+<ion-content scroll="false" class="splash-bg">
+  <form class="sign-up" (submit)="doLogin()">
+    <ion-list>
+      <ion-item>
+        <ion-input type="email" [placeholder]=" 'EMAIL' | translate" [(ngModel)]="account.email"
+                   name="email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="password" [placeholder]=" 'PASSWORD' | translate " [(ngModel)]="account.password"
+                   name="password"></ion-input>
+      </ion-item>
+
+      <div padding>
+        <button ion-button color="primary" block>{{ 'LOGIN_BUTTON' | translate }}</button>
+      </div>
+
+      <div class="login-footer">
+        <a (click)="signup()">{{ 'SIGNUP' | translate }}</a>
+        <a (click)="forget()">{{ 'FORGET' | translate }}</a>
+      </div>
+    </ion-list>
+  </form>
+
+</ion-content>

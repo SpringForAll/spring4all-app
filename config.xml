@@ -3,7 +3,7 @@
     <name>Spring4All</name>
     <description>Spring4All</description>
     <author email="ayanghuiqiang@gmail.com" href="http://ionicframework.com/">Spring4All</author>
-    <content src="index.html" />
+    <content original-src="index.html" src="http://192.168.2.115:8100" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
@@ -76,6 +76,7 @@
         <splash height="480" src="resources/ios/splash/Default~iphone.png" width="320" />
         <splash height="2732" src="resources/ios/splash/Default@2x~universal~anyany.png" width="2732" />
     </platform>
+    <allow-navigation href="http://192.168.2.115:8100" />
     <engine name="android" spec="6.3.0" />
     <engine name="ios" spec="4.5.2" />
     <plugin name="ionic-plugin-keyboard" spec="^2.2.1" />
