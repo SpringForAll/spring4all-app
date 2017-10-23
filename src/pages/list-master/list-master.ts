@@ -1,8 +1,8 @@
-import { Component } from '@angular/core';
-import { IonicPage, ModalController, NavController } from 'ionic-angular';
+import {Component, ViewChild} from '@angular/core';
+import {IonicPage, ModalController, NavController, Slides} from 'ionic-angular';
 
-import { Item } from '../../models/item';
-import { Items } from '../../providers/providers';
+import {Item} from '../../models/item';
+import {Items} from '../../providers/providers';
 
 @IonicPage()
 @Component({
@@ -10,6 +10,7 @@ import { Items } from '../../providers/providers';
   templateUrl: 'list-master.html'
 })
 export class ListMasterPage {
+
   currentItems: Item[];
 
   constructor(public navCtrl: NavController, public items: Items, public modalCtrl: ModalController) {
@@ -22,7 +23,7 @@ export class ListMasterPage {
   ionViewDidLoad() {
   }
 
-  openSearch(){
+  openSearch() {
     let serchModal = this.modalCtrl.create('SearchPage');
     serchModal.onDidDismiss(item => {
       if (item) {
@@ -31,6 +32,7 @@ export class ListMasterPage {
     })
     serchModal.present();
   }
+
   /**
    * Delete an item from the list of items.
    */
