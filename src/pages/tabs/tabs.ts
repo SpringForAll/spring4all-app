@@ -7,6 +7,13 @@ import { Tab2Root } from '../pages';
 import { Tab3Root } from '../pages';
 import { Tab4Root } from '../pages';
 
+/**
+ * Generated class for the TabsPage tabs.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+
 @IonicPage()
 @Component({
   selector: 'page-tabs',
