@@ -3,7 +3,7 @@
     <name>Spring4All</name>
     <description>Spring4All</description>
     <author email="ayanghuiqiang@gmail.com" href="http://ionicframework.com/">Spring4All</author>
-    <content original-src="index.html" src="http://192.168.2.115:8100" />
+    <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
@@ -78,10 +78,11 @@
     </platform>
     <allow-navigation href="http://192.168.2.115:8100" />
     <engine name="android" spec="6.3.0" />
-    <engine name="ios" spec="4.5.2" />
-    <plugin name="ionic-plugin-keyboard" spec="^2.2.1" />
-    <plugin name="cordova-plugin-whitelist" spec="^1.3.1" />
-    <plugin name="cordova-plugin-device" spec="^1.1.4" />
-    <plugin name="cordova-plugin-splashscreen" spec="^4.0.3" />
-    <plugin name="cordova-plugin-ionic-webview" spec="^1.1.15" />
+    <engine name="ios" spec="~4.5.2" />
+    <plugin name="ionic-plugin-keyboard" spec="~2.2.1" />
+    <plugin name="cordova-plugin-whitelist" spec="~1.3.1" />
+    <plugin name="cordova-plugin-device" spec="~1.1.4" />
+    <plugin name="cordova-plugin-splashscreen" spec="~4.0.1" />
+    <plugin name="cordova-plugin-ionic-webview" spec="^1.1.11" />
+    <allow-navigation href="http://172.24.235.228:8101" />
 </widget>
