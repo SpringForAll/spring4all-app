@@ -15,7 +15,7 @@ import { Api } from '../api/api';
  * ```json
  * {
  *   status: 'success',
- *   user: {
+ *   data: {
  *     // User fields your app needs, like "id", "name", "email", etc.
  *   }
  * }Ø
@@ -40,7 +40,6 @@ export class User {
       // If the API returned a successful response, mark the user as logged in
       if (res.status == 'success') {
         this._loggedIn(res);
-      } else {
       }
     }, err => {
       console.error('ERROR', err);
@@ -79,6 +78,6 @@ export class User {
    * Process a login/signup response to store user data
    */
   _loggedIn(resp) {
-    this._user = resp.user;
+    this._user = resp.data;
   }
 }

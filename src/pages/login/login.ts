@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
-import { IonicPage, NavController, ToastController } from 'ionic-angular';
+import {Component} from '@angular/core';
+import {TranslateService} from '@ngx-translate/core';
+import {IonicPage, NavController, ToastController} from 'ionic-angular';
 
-import { User } from '../../providers/providers';
-import { MainPage } from '../pages';
+import {User} from '../../providers/providers';
+import {MainPage} from '../pages';
 
 @IonicPage()
 @Component({
@@ -23,9 +23,9 @@ export class LoginPage {
   private loginErrorString: string;
 
   constructor(public navCtrl: NavController,
-    public user: User,
-    public toastCtrl: ToastController,
-    public translateService: TranslateService) {
+              public user: User,
+              public toastCtrl: ToastController,
+              public translateService: TranslateService) {
 
     this.translateService.get('LOGIN_ERROR').subscribe((value) => {
       this.loginErrorString = value;
@@ -34,10 +34,17 @@ export class LoginPage {
 
   // Attempt to login in through our User service
   doLogin() {
-    this.user.login(this.account).subscribe((resp) => {
-      this.navCtrl.push(MainPage);
+    this.user.login(this.account).subscribe((resp: any) => {
+      if (resp.status == 'success') {
+        this.navCtrl.push(MainPage);
+      } else {
+        let toast = this.toastCtrl.create({
+          message: this.loginErrorString,
+          duration: 3000,
+          position: 'top'
+        });
+      }
     }, (err) => {
-      this.navCtrl.push(MainPage);
       // Unable to log in
       let toast = this.toastCtrl.create({
         message: this.loginErrorString,
