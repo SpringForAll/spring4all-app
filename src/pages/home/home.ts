@@ -20,9 +20,8 @@ export class HomePage {
   title: string = '';
   slideData: Array<any> = [];
   pages: Array<any> = [];
-  spinner: boolean = true;
 
-  constructor(private translateService: TranslateService, public navCtrl: NavController, public navParams: NavParams) {
+  constructor(translateService: TranslateService, public navCtrl: NavController, public navParams: NavParams) {
     translateService.get('TAB1_TITLE').subscribe(title => {
       this.title = title;
     });
@@ -46,45 +45,66 @@ export class HomePage {
     this.pages = [
       {
         "title": "MySQL Schema与数据类型的优化",
-        "abstract": "选择优化的数据类型： 1、 更小的通常更好： 一般情况下，应该尽量使用可以正确存储数据的最小数据类型。更小的数据类型通常更快，因为他们占用更少的磁盘，内存和cpu缓存，并且处理时需要的cpu周期也更少",
+        "abstract": "选择优化的数据类型： 1、 更小的通常更好： 一般情况下，应该尽量使用可以正确存储数据的最小数据类型。",
         "time": "杨小强 发布于 4小时前",
         "like": "12",
         "commit": "21"
       },
       {
         "title": "疯狂Spring Cloud连载（十一）——Feign的编码器与解码器",
-        "abstract": " 本文节选自《疯狂Spring Cloud微服务架构实战》，本书将于2017年11月出版。         Spring Cloud教学视频：https://my.oschina.net/JavaLaw/blog/1552993 本书代码共享地址：https://gitee.com/y",
+        "abstract": " 本文节选自《疯狂Spring Cloud微服务架构实战》，本书将于2017年11月出版。         Spring Cloud教学视频：",
         "time": "杨小强 发布于 一年前",
         "like": "122",
         "commit": "101"
       },
       {
         "title": "MySQL Schema与数据类型的优化",
-        "abstract": "选择优化的数据类型： 1、 更小的通常更好： 一般情况下，应该尽量使用可以正确存储数据的最小数据类型。更小的数据类型通常更快，因为他们占用更少的磁盘，内存和cpu缓存，并且处理时需要的cpu周期也更少",
+        "abstract": "选择优化的数据类型： 1、 更小的通常更好： 一般情况下，应该尽量使用可以正确存储数据的最小数据类型。",
+        "time": "杨小强 发布于 4小时前",
+        "like": "12",
+        "commit": "21"
+      },
+      {
+        "title": "MySQL Schema与数据类型的优化",
+        "abstract": "选择优化的数据类型： 1、 更小的通常更好： 一般情况下，应该尽量使用可以正确存储数据的最小数据类型。",
         "time": "杨小强 发布于 4小时前",
         "like": "12",
         "commit": "21"
       },
       {
         "title": "疯狂Spring Cloud连载（十一）——Feign的编码器与解码器",
-        "abstract": " 本文节选自《疯狂Spring Cloud微服务架构实战》，本书将于2017年11月出版。         Spring Cloud教学视频：https://my.oschina.net/JavaLaw/blog/1552993 本书代码共享地址：https://gitee.com/y",
+        "abstract": " 本文节选自《疯狂Spring Cloud微服务架构实战》，本书将于2017年11月出版。         Spring Cloud教学视频：",
         "time": "杨小强 发布于 一年前",
         "like": "122",
         "commit": "101"
       },
       {
         "title": "MySQL Schema与数据类型的优化",
-        "abstract": "选择优化的数据类型： 1、 更小的通常更好： 一般情况下，应该尽量使用可以正确存储数据的最小数据类型。更小的数据类型通常更快，因为他们占用更少的磁盘，内存和cpu缓存，并且处理时需要的cpu周期也更少",
+        "abstract": "选择优化的数据类型： 1、 更小的通常更好： 一般情况下，应该尽量使用可以正确存储数据的最小数据类型。",
+        "time": "杨小强 发布于 4小时前",
+        "like": "12",
+        "commit": "21"
+      },
+      {
+        "title": "MySQL Schema与数据类型的优化",
+        "abstract": "选择优化的数据类型： 1、 更小的通常更好： 一般情况下，应该尽量使用可以正确存储数据的最小数据类型。",
         "time": "杨小强 发布于 4小时前",
         "like": "12",
         "commit": "21"
       },
       {
         "title": "疯狂Spring Cloud连载（十一）——Feign的编码器与解码器",
-        "abstract": " 本文节选自《疯狂Spring Cloud微服务架构实战》，本书将于2017年11月出版。         Spring Cloud教学视频：https://my.oschina.net/JavaLaw/blog/1552993 本书代码共享地址：https://gitee.com/y",
+        "abstract": " 本文节选自《疯狂Spring Cloud微服务架构实战》，本书将于2017年11月出版。         Spring Cloud教学视频：",
         "time": "杨小强 发布于 一年前",
         "like": "122",
         "commit": "101"
+      },
+      {
+        "title": "MySQL Schema与数据类型的优化",
+        "abstract": "选择优化的数据类型： 1、 更小的通常更好： 一般情况下，应该尽量使用可以正确存储数据的最小数据类型。",
+        "time": "杨小强 发布于 4小时前",
+        "like": "12",
+        "commit": "21"
       }
     ];
   }

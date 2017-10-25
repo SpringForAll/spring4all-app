@@ -9,7 +9,8 @@ page-home {
       bottom: 0px;
       width: 100%;
       height: 30px;
-      background: linear-gradient(to right, #f9a727, #265ff9);
+      //background: linear-gradient(to right, #f9a727, #265ff9);
+      background: #c2beb3;
       opacity: 0.6;
     }
     .title {
@@ -23,5 +24,12 @@ page-home {
       text-align: center;
       color: white;
     }
+  }
+  .item-block{
+    min-height: 0;
+  }
+
+  .item-ios{
+    font-size: 1.5rem;
   }
 }
