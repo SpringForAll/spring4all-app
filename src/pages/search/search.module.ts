@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
-import { TranslateModule } from '@ngx-translate/core';
 import { IonicPageModule } from 'ionic-angular';
-
 import { SearchPage } from './search';
 
 @NgModule({
@@ -10,10 +8,6 @@ import { SearchPage } from './search';
   ],
   imports: [
     IonicPageModule.forChild(SearchPage),
-    TranslateModule.forChild()
   ],
-  exports: [
-    SearchPage
-  ]
 })
-export class SearchPageModule { }
+export class SearchPageModule {}

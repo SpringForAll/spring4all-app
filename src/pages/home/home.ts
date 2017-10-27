@@ -18,14 +18,11 @@ import {Api} from "../../providers/api/api"
 export class HomePage {
   @ViewChild(Slides) slides: Slides;
 
-  title: string = '';
   slideData: Array<any> = [];
   pages: Array<any> = [];
 
   constructor(translateService: TranslateService, public navCtrl: NavController, public navParams: NavParams,public api:Api) {
-    translateService.get('TAB1_TITLE').subscribe(title => {
-      this.title = title;
-    });
+
     this.getSlides();
     this.getPages();
   }
@@ -64,7 +61,7 @@ export class HomePage {
     seq.subscribe((res: any) => {
       // If the API returned a successful response, mark the user as logged in
       if (res.success) {
-        this.pages = res.data;
+        this.slideData = res.data;
       }
     }, err => {
       console.error('ERROR', err);
@@ -73,8 +70,7 @@ export class HomePage {
     return seq;
   }
 
-  goSearch(event){
-    console.log(event)
-    console.log("go search")
+  goSearch() {
+    this.navCtrl.push('SearchPage');
   }
 }

@@ -13,6 +13,11 @@
   "TAB3_TITLE": "Settings",
   "TAB4_TITLE": "Profile",
 
+  "HOME_TITLE": "HOME",
+  "CHAT_TITLE": "CHAT",
+  "NEWS_TITLE": "NEWS",
+  "PROFILE_TITLE": "PROFILE",
+
   "MAP_TITLE": "Map",
 
   "TUTORIAL_SKIP_BUTTON": "Skip",
@@ -61,6 +66,5 @@
 
   "CARDS_TITLE": "Social",
 
-  "SEARCH_TITLE": "Search",
-  "SEARCH_PLACEHOLDER": "Search the items list, e.g. \"Donald Duck\""
+  "SEARCH_TITLE": "Search page and question"
 }

@@ -13,6 +13,11 @@
   "TAB3_TITLE": "发起",
   "TAB4_TITLE": "我的",
 
+  "HOME_TITLE": "发现",
+  "CHAT_TITLE": "话题",
+  "NEWS_TITLE": "发起",
+  "PROFILE_TITLE": "我的",
+
   "MAP_TITLE": "地址",
 
   "TUTORIAL_SKIP_BUTTON": "跳过",
@@ -61,6 +66,5 @@
 
   "CARDS_TITLE": "社交",
 
-  "SEARCH_TITLE": "搜索",
-  "SEARCH_PLACEHOLDER": "搜索一下吧"
+  "SEARCH_TITLE": "搜索文章、提问"
 }

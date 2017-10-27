@@ -38,7 +38,7 @@ export class LoginPage {
       if (resp.success) {
         this.navCtrl.push(MainPage);
       } else {
-        let toast = this.toastCtrl.create({
+        this.toastCtrl.create({
           message: this.loginErrorString,
           duration: 3000,
           position: 'top'
