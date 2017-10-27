@@ -34,11 +34,11 @@ export class User {
    * the user entered on the form.
    */
   login(accountInfo: any) {
-    let seq = this.api.post('login', accountInfo).share();
+    let seq = this.api.get('login', accountInfo).share();
 
     seq.subscribe((res: any) => {
       // If the API returned a successful response, mark the user as logged in
-      if (res.status == 'success') {
+      if (res.success) {
         this._loggedIn(res);
       }
     }, err => {
@@ -57,7 +57,7 @@ export class User {
 
     seq.subscribe((res: any) => {
       // If the API returned a successful response, mark the user as logged in
-      if (res.status == 'success') {
+      if (res.success) {
         this._loggedIn(res);
       }
     }, err => {

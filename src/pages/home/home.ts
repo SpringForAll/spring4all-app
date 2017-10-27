@@ -47,7 +47,7 @@ export class HomePage {
 
     seq.subscribe((res: any) => {
       // If the API returned a successful response, mark the user as logged in
-      if (res.status == 'success') {
+      if (res.success) {
         this.pages = res.data;
       }
     }, err => {
@@ -63,7 +63,7 @@ export class HomePage {
 
     seq.subscribe((res: any) => {
       // If the API returned a successful response, mark the user as logged in
-      if (res.status == 'success') {
+      if (res.success) {
         this.pages = res.data;
       }
     }, err => {

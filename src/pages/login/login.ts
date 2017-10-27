@@ -35,7 +35,7 @@ export class LoginPage {
   // Attempt to login in through our User service
   doLogin() {
     this.user.login(this.account).subscribe((resp: any) => {
-      if (resp.status == 'success') {
+      if (resp.success) {
         this.navCtrl.push(MainPage);
       } else {
         let toast = this.toastCtrl.create({
