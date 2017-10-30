@@ -49,5 +49,6 @@
   "SEARCH_TITLE": "搜索文章、提问",
   "LOADING_TEXT": "加载更多...",
   "REFRESHING_TEXT": "刷新中...",
-  "PULLING_TEXT":"下拉刷新"
+  "PULLING_TEXT":"下拉刷新",
+  "BANK_TEXT":"返回"
 }

@@ -7,6 +7,11 @@
 <ion-header>
   <ion-toolbar>
     <ion-searchbar (input)="search($event)" placeholder="{{ 'SEARCH_TITLE' | translate }}"></ion-searchbar>
+    <ion-buttons end>
+      <button ion-button color="light" (click)="dismiss()">
+        <span ion-text>{{'BANK_TEXT'| translate}}</span>
+      </button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 

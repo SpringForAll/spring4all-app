@@ -49,5 +49,6 @@
   "SEARCH_TITLE": "Search page and question",
   "LOADING_TEXT": "Loading more data...",
   "REFRESHING_TEXT": "Refreshing...",
-  "PULLING_TEXT":"Pull to refresh"
+  "PULLING_TEXT":"Pull to refresh",
+  "BANK_TEXT":"back"
 }
