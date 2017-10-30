@@ -1,6 +1,22 @@
 <ion-tabs #mainTabs>
   <ion-tab [root]="tab1Root" [tabTitle]="tab1Title" tabIcon="ios-home-outline"></ion-tab>
-  <ion-tab [root]="tab2Root" [tabTitle]="tab2Title" tabIcon="ios-chatboxes-outline"></ion-tab>
-  <ion-tab [root]="tab3Root" [tabTitle]="tab3Title" [tabBadge]="tab2Badge" tabIcon="ios-open-outline"></ion-tab>
+  <ion-tab [root]="tab2Root" [tabTitle]="tab2Title" [tabBadge]="tab2Badge" tabIcon="ios-chatboxes-outline"></ion-tab>
+  <ion-tab></ion-tab>
+  <ion-tab [root]="tab3Root" [tabTitle]="tab3Title" tabIcon="ios-open-outline"></ion-tab>
   <ion-tab [root]="tab4Root" [tabTitle]="tab4Title" tabIcon="ios-person-outline"></ion-tab>
+  <ion-fab center bottom>
+    <button ion-fab color="primary">
+      <ion-icon name="add"></ion-icon>
+    </button>
+    <ion-fab-list side="top">
+      <button ion-fab color="primary">
+        <ion-icon name="logo-vimeo"></ion-icon>
+      </button>
+      <button ion-fab color="primary">
+        <ion-icon name="logo-googleplus"></ion-icon>
+      </button>
+    </ion-fab-list>
+  </ion-fab>
 </ion-tabs>
+
+

@@ -1,5 +1,5 @@
 import {Component, ViewChild} from '@angular/core';
-import {IonicPage, NavController, NavParams, Slides} from 'ionic-angular';
+import {IonicPage, ModalController, NavController, NavParams, Slides} from 'ionic-angular';
 import {TranslateService} from "@ngx-translate/core";
 import {Api} from "../../providers/api/api"
 
@@ -20,11 +20,15 @@ export class HomePage {
 
   slideData: Array<any> = [];
   pages: Array<any> = [];
+  loadError: string = ' ';
 
-  constructor(translateService: TranslateService, public navCtrl: NavController, public navParams: NavParams,public api:Api) {
-
+  constructor(public translateService: TranslateService, public navCtrl: NavController, public navParams: NavParams,
+              public api: Api, public modalController: ModalController) {
     this.getSlides();
     this.getPages();
+    this.translateService.get('LOADING_ERROR').subscribe((value) => {
+      this.loadError = value;
+    })
   }
 
   ionViewWillEnter() {
@@ -39,13 +43,31 @@ export class HomePage {
     console.log('ionViewDidLoad HomePage');
   }
 
+  doRefresh(refresher) {
+    console.log('Begin async operation', refresher);
+    setTimeout(() => {
+      this.pages = [];
+      this.getPages();
+      refresher.complete();
+    }, 500);
+  }
+
+  doInfinite(infiniteScroll) {
+    console.log('Begin async operation');
+
+    setTimeout(() => {
+      this.getPages()
+      infiniteScroll.complete();
+    }, 500);
+  }
+
   getPages() {
     let seq = this.api.get('pages').share();
 
     seq.subscribe((res: any) => {
       // If the API returned a successful response, mark the user as logged in
       if (res.success) {
-        this.pages = res.data;
+        this.pages = this.pages.concat(res.data);
       }
     }, err => {
       console.error('ERROR', err);
@@ -54,8 +76,9 @@ export class HomePage {
     return seq;
   }
 
-  //获取幻灯片
+  //
   getSlides() {
+
     let seq = this.api.get('slides').share();
 
     seq.subscribe((res: any) => {
@@ -70,7 +93,8 @@ export class HomePage {
     return seq;
   }
 
-  goSearch() {
-    this.navCtrl.push('SearchPage');
+  openSearch() {
+    let modal = this.modalController.create("SearchPage");
+    modal.present();
   }
 }

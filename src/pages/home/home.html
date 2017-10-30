@@ -5,10 +5,26 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-  <ion-searchbar style="opacity: 0.8" (click)="goSearch()"
-                 placeholder="{{ 'SEARCH_TITLE' | translate }}"></ion-searchbar>
+  <ion-toolbar>
+    <ion-title>{{"HOME_TITLE" | translate}}</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only color="light" (click)="openSearch()">
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
 </ion-header>
+
+
 <ion-content>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="{{'PULLING_TEXT'| translate}}"
+      refreshingSpinner="circles"
+      refreshingText="{{'REFRESHING_TEXT' | translate}}">
+    </ion-refresher-content>
+  </ion-refresher>
   <ion-slides pager autoplay="3000" speed="1000" loop="true" autoplayDisableOnInteration="true">
     <ion-slide *ngFor="let item of slideData" (click)="openPage(item)">
       <img src="{{item.img}}" alt="{{item.title}}">
@@ -27,7 +43,7 @@
     <ion-row>
       <ion-col>
         <button ion-button clear small>
-          <span>{{page.time}}</span>
+          <span class="user-span">{{page.time}}</span>
         </button>
       </ion-col>
       <ion-col>
@@ -43,5 +59,11 @@
     </ion-row>
   </ion-card>
 
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="{{'LOADING_TEXT' | translate}}">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
 
 </ion-content>
