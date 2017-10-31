@@ -29,7 +29,7 @@
     "@ngx-translate/core": "8.0.0",
     "@ngx-translate/http-loader": "^2.0.0",
     "cordova-android": "6.3.0",
-    "cordova-ios": "^4.5.2",
+    "cordova-ios": "4.5.2",
     "cordova-plugin-device": "^1.1.4",
     "cordova-plugin-ionic-webview": "^1.1.15",
     "cordova-plugin-splashscreen": "^4.0.3",

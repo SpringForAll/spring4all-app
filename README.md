@@ -1,8 +1,53 @@
-# The Ionic Super Starter 🎮
-
-_Note: the Ionic Super Starter requires Ionic CLI 3._
+# Spring4All App 🎮
 
 <img src="doc/super2.png" width="400" />
+
+-  Just Run App
+> _Note: the Ionic Super Starter requires Ionic CLI 3._
+## 1、安装
+
+#### 环境搭建
+`npm install -g ionic cordova`
+
+## 2、部署
+#### 安装依赖
+`npm i`
+#### 浏览器启动
+`ionic serve`
+
+## 3、打包
+#### 3-1 添加平台
+
+```bash
+ionic cordova platform add ios
+ionic cordova platform add android
+```
+
+```bash
+-- android
+ionic cordova run android
+
+ionic cordova run android --prod --release
+ionic cordova build android --prod --release
+
+-- ios
+ionic cordova run ios
+
+ionic cordova run ios --prod --release
+ionic cordova build ios --prod --release
+
+
+```
+
+#### 3-2 真机
+```bash
+- usb 手机连接电脑，手机开启开发者模式
+ionic cordova run android --device
+ionic cordova run ios --device
+
+```
+
+--------
 
 The Ionic Super Starter is a batteries-included starter project for Ionic apps complete with pre-built pages, providers, and best practices for Ionic development.
 
@@ -65,44 +110,6 @@ To add new languages, add new files to the `src/assets/i18n` directory, followin
 
 To change the language of the app, edit `src/app/app.component.ts` and modify `translate.use('en')` to use the LANGCODE from `src/assets/i18n/`
 
-
-
-# Just Run
-
-## 安装
-
-#### 环境搭建
-`npm install -g ionic cordova`
-
-## 部署
-#### 安装依赖
-`npm i`
-#### 浏览器启动
-`ionic serve`
-
-## 打包
-#### 添加平台
-`ionic cordova platform add ios`
-`ionic cordova platform add android`
-
-
--- android
-`ionic cordova run android`
-
-`ionic cordova run android --prod --release`
-`ionic cordova build android --prod --release`
-
--- ios
-`ionic cordova run ios`
-
-`ionic cordova run ios --prod --release`
-`ionic cordova build ios --prod --release`
-
-#### 真机
-
-- usb 手机连接电脑，手机开启开发者模式
-`ionic cordova run android --device`
-`ionic cordova run ios --device`
 
 
 
