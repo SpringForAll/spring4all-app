@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import 'rxjs/add/operator/map';
 import {ThemeableBrowser} from 'ionic-native';
+import {Constant} from '../constant/constant';
 
 
 /*
@@ -14,14 +15,14 @@ export class Browser {
 
   private options: any = {
     statusbar: {
-      color: '#2eb3feff'
+      color: this.constant.colors_primary
     },
     toolbar: {
       height: 44,
-      color: '#2eb3feff'
+      color: this.constant.colors_primary
     },
     title: {
-      color: '#ffffffff',
+      color: this.constant.colors_light,
       showPageTitle: true
     },
     backButton: {
@@ -30,31 +31,12 @@ export class Browser {
       align: 'left',
       event: 'backPressed'
     },
-    forwardButton: {
-      image: 'forward',
-      imagePressed: 'forward_pressed',
-      align: 'left',
-      event: 'forwardPressed'
-    },
-    closeButton: {
-      image: 'close',
-      imagePressed: 'close_pressed',
-      align: 'left',
-      event: 'closePressed'
-    },
-    customButtons: [
-      {
-        image: 'share',
-        imagePressed: 'share_pressed',
-        align: 'right',
-        event: 'sharePressed'
-      }
-    ],
-    menu: {
-      image: 'menu',
+    backButtonCanClose: true
+   /* menu: {
+      image: 'share',
       imagePressed: 'menu_pressed',
-      title: 'Test',
-      cancel: 'Cancel',
+      title: '分享',
+      cancel: '取消',
       align: 'right',
       items: [
         {
@@ -66,17 +48,20 @@ export class Browser {
           label: 'Test!'
         }
       ]
-    },
-    backButtonCanClose: true
+    }*/
   };
 
   target: string = '_blank';
 
-  constructor(private url: string, target: string) {
-    this.target = target;
+  constructor(public constant: Constant) {
   }
 
-  launch() {
-    return new ThemeableBrowser(this.url, this.target, this.options);
+  launch(url) {
+    return new ThemeableBrowser(url, this.target, this.options);
+  }
+
+  launchWithTaget(url, target) {
+    this.target = target;
+    return this.launch(url);
   }
 }

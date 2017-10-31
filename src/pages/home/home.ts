@@ -24,7 +24,7 @@ export class HomePage {
   loadError: string = ' ';
 
   constructor(public translateService: TranslateService, public navCtrl: NavController, public navParams: NavParams,
-              public api: Api, public modalController: ModalController) {
+              public api: Api, public modalController: ModalController,public browser: Browser) {
     this.getSlides();
     this.getPages();
     this.translateService.get('LOADING_ERROR').subscribe((value) => {
@@ -93,7 +93,6 @@ export class HomePage {
   }
 
   openPages(url) {
-    let browser = new Browser(url, '_blank');
-    console.log(browser)
+    this.browser.launch(url);
   }
 }

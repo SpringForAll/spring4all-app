@@ -14,6 +14,7 @@ import { User } from '../providers/providers';
 import { Api } from '../providers/api/api';
 import { MyApp } from './app.component';
 import { Browser } from '../providers/browser/browser';
+import { Constant } from '../providers/constant/constant';
 
 // The translate loader needs to know where to load i18n files
 // in Ionic's static asset pipeline.
@@ -65,6 +66,7 @@ export function provideSettings(storage: Storage) {
     Api,
     User,
     Browser,
+    Constant,
     Camera,
     SplashScreen,
     StatusBar,
