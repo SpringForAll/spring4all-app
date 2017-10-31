@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
  */
 @Injectable()
 export class Api {
-  url: string = 'http://192.168.2.115/spring4all/mock';
+  url: string = 'http://www.mockhttp.cn/mock/mock';
 
   constructor(public http: HttpClient) {
   }

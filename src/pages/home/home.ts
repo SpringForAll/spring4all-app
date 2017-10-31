@@ -113,6 +113,7 @@ export class HomePage {
       },
       backButtonCanClose: true
     };
-    let browser = new ThemeableBrowser(url, '_self', options);
+    let browser = new ThemeableBrowser(url, '_blank', options);
+    console.log(browser)
   }
 }
