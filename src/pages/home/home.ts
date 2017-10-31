@@ -1,8 +1,8 @@
 import {Component, ViewChild} from '@angular/core';
 import {IonicPage, ModalController, NavController, NavParams, Slides} from 'ionic-angular';
-import { ThemeableBrowser } from 'ionic-native';
 import {TranslateService} from "@ngx-translate/core";
 import {Api} from "../../providers/api/api"
+import {Browser} from "../../providers/browser/browser"
 
 /**
  * Generated class for the HomePage page.
@@ -93,27 +93,7 @@ export class HomePage {
   }
 
   openPages(url) {
-    let options = {
-      statusbar: {
-        color: '#f8285c'
-      },
-      toolbar: {
-        height: 44,
-        color: '#f8285c'
-      },
-      title: {
-        color: '#ffffffff',
-        showPageTitle: true
-      },
-      backButton: {
-        image: 'back',
-        imagePressed: 'back_pressed',
-        align: 'left',
-        event: 'backPressed'
-      },
-      backButtonCanClose: true
-    };
-    let browser = new ThemeableBrowser(url, '_blank', options);
+    let browser = new Browser(url, '_blank');
     console.log(browser)
   }
 }

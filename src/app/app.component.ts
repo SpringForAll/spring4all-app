@@ -36,7 +36,8 @@ export class MyApp {
     this.translate.setDefaultLang('zh');
 
     if (this.translate.getBrowserLang() !== undefined) {
-      this.translate.use(this.translate.getBrowserLang());
+      this.translate.use('zh'); // Set your language here
+      // this.translate.use(this.translate.getBrowserLang());
     } else {
       this.translate.use('zh'); // Set your language here
     }
