@@ -26,14 +26,14 @@
     </ion-refresher-content>
   </ion-refresher>
   <ion-slides pager autoplay="3000" speed="1000" loop="true" autoplayDisableOnInteration="true">
-    <ion-slide *ngFor="let item of slideData" (click)="openPage(item)">
+    <ion-slide *ngFor="let item of slideData" (click)="openPages(item.url)">
       <img src="{{item.img}}" alt="{{item.title}}">
       <div class="cover"></div>
       <span class="title">{{item.title}}</span>
     </ion-slide>
   </ion-slides>
 
-  <ion-card *ngFor="let page of pages" (click)="openPage(page)">
+  <ion-card *ngFor="let page of pages" (click)="openPages(page.url)">
     <ion-item>
       <h2>{{page.title}}</h2>
     </ion-item>
