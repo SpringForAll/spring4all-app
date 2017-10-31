@@ -57,21 +57,6 @@ The way to use this starter is to pick and choose the various page types you wan
 
 One of the big advances in Ionic was moving from a rigid route-based navigation system to a flexible push/pop navigation system modeled off common native SDKs. We've embraced this pattern to provide a set of reusable pages that can be navigated to anywhere in the app. Take a look at the [Settings page](https://github.com/ionic-team/ionic-starter-super/blob/master/src/pages/settings/settings.html#L38) for a cool example of a page navigating to itself to provide a different UI without duplicating code.
 
-## Table of Contents
-
-1. [Getting Started](#getting-started)
-2. [Pages](#pages)
-3. [Providers](#providers)
-4. [i18n](#i18n) (adding languages)
-
-## <a name="getting-started"></a>Getting Started
-
-To test this starter out, install the latest version of the Ionic CLI and run:
-
-```bash
-ionic start mySuperApp super
-```
-
 ## Pages
 
 The Super Starter comes with a variety of ready-made pages. These pages help you assemble common building blocks for your app so you can focus on your unique features and branding.
@@ -84,7 +69,6 @@ Once the user is authenticated, the app will load with the `MainPage` which is s
 
 The entry and main pages can be configured easily by updating the corresponding variables in [src/pages/pages.ts](https://github.com/ionic-team/ionic-starter-super/blob/master/src/pages/pages.ts).
 
-Please read the [Pages](https://github.com/ionic-team/ionic-starter-super/tree/master/src/pages) readme, and the readme for each page in the source for more documentation on each.
 
 ## Providers
 
