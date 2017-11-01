@@ -51,5 +51,5 @@
   "REFRESHING_TEXT": "刷新中...",
   "PULLING_TEXT":"下拉刷新",
   "BANK_TEXT":"返回",
-  "networkErrorString"
+  "NETWORK_ERROR":"网络好像不通了(⊙o⊙)"
 }

@@ -1,9 +1,10 @@
 import {Component} from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
 import {IonicPage, NavController, ToastController} from 'ionic-angular';
-
+import {Storage} from '@ionic/storage';
 import {User} from '../../providers/providers';
 import {MainPage} from '../pages';
+import {Settings} from "../../providers/settings/settings";
 
 @IonicPage()
 @Component({
@@ -25,6 +26,8 @@ export class LoginPage {
 
   constructor(public navCtrl: NavController,
               public user: User,
+              public settings: Settings,
+              public storage: Storage,
               public toastCtrl: ToastController,
               public translateService: TranslateService) {
 
@@ -32,7 +35,7 @@ export class LoginPage {
       this.loginErrorString = value;
     });
     this.translateService.get('NETWORK_ERROR').subscribe((value) => {
-      this.ne = value;
+      this.networkErrorString = value;
     });
   }
 
@@ -40,6 +43,8 @@ export class LoginPage {
   doLogin() {
     this.user.login(this.account).subscribe((resp: any) => {
       if (resp.success) {
+        this.storage.set("token", resp.data.token);
+        this.storage.set("user", resp.data);
         this.navCtrl.push(MainPage);
       } else {
         this.toastCtrl.create({

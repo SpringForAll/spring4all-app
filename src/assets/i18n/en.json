@@ -50,5 +50,6 @@
   "LOADING_TEXT": "Loading more data...",
   "REFRESHING_TEXT": "Refreshing...",
   "PULLING_TEXT":"Pull to refresh",
-  "BANK_TEXT":"back"
+  "BANK_TEXT":"back",
+  "NETWORK_ERROR":"network may be have error"
 }
