@@ -21,6 +21,7 @@ export class LoginPage {
 
   // Our translated text strings
   private loginErrorString: string;
+  private networkErrorString: string;
 
   constructor(public navCtrl: NavController,
               public user: User,
@@ -29,7 +30,10 @@ export class LoginPage {
 
     this.translateService.get('LOGIN_ERROR').subscribe((value) => {
       this.loginErrorString = value;
-    })
+    });
+    this.translateService.get('NETWORK_ERROR').subscribe((value) => {
+      this.ne = value;
+    });
   }
 
   // Attempt to login in through our User service
@@ -47,7 +51,7 @@ export class LoginPage {
     }, (err) => {
       // Unable to log in
       let toast = this.toastCtrl.create({
-        message: this.loginErrorString,
+        message: this.networkErrorString,
         duration: 3000,
         position: 'top'
       });

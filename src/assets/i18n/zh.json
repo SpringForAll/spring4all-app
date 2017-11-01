@@ -50,5 +50,6 @@
   "LOADING_TEXT": "加载更多...",
   "REFRESHING_TEXT": "刷新中...",
   "PULLING_TEXT":"下拉刷新",
-  "BANK_TEXT":"返回"
+  "BANK_TEXT":"返回",
+  "networkErrorString"
 }

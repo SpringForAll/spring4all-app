@@ -14,14 +14,20 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
-ion-navbar{
+ion-navbar {
   opacity: 0.8;
 }
-ion-toolbar{
+
+ion-toolbar {
   opacity: 0.8;
 }
+
 .toolbar-background {
   background-color: color($colors, primary);
+}
+
+.toolbar-title-ios {
+  color: color($colors, light);
 }
 
 
