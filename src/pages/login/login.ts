@@ -47,11 +47,12 @@ export class LoginPage {
         this.storage.set("user", resp.data);
         this.navCtrl.push(MainPage);
       } else {
-        this.toastCtrl.create({
+        let toast = this.toastCtrl.create({
           message: this.loginErrorString,
           duration: 3000,
           position: 'top'
         });
+        toast.present();
       }
     }, (err) => {
       // Unable to log in

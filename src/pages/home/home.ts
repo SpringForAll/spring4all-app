@@ -1,5 +1,5 @@
 import {Component, ViewChild} from '@angular/core';
-import {IonicPage, ModalController, NavController, NavParams, Slides} from 'ionic-angular';
+import {IonicPage, ModalController, NavController, NavParams, Slides, ToastController} from 'ionic-angular';
 import {TranslateService} from "@ngx-translate/core";
 import {Api} from "../../providers/api/api"
 import {Browser} from "../../providers/browser/browser"
@@ -22,14 +22,23 @@ export class HomePage {
   slideData: Array<any> = [];
   pages: Array<any> = [];
   loadError: string = ' ';
+  private networkErrorString: string;
 
-  constructor(public translateService: TranslateService, public navCtrl: NavController, public navParams: NavParams,
-              public api: Api, public modalController: ModalController,public browser: Browser) {
+  constructor(public translateService: TranslateService,
+              public navCtrl: NavController,
+              public navParams: NavParams,
+              public api: Api,
+              public toastCtrl: ToastController,
+              public modalController: ModalController,
+              public browser: Browser) {
     this.getSlides();
     this.getPages();
-    this.translateService.get('LOADING_ERROR').subscribe((value) => {
+    this.translateService.get('NETWORK_ERROR').subscribe((value) => {
       this.loadError = value;
-    })
+    });
+    this.translateService.get('NETWORK_ERROR').subscribe((value) => {
+      this.networkErrorString = value;
+    });
   }
 
   ionViewWillEnter() {
@@ -66,8 +75,11 @@ export class HomePage {
       // If the API returned a successful response, mark the user as logged in
       if (res.success) {
         this.pages = this.pages.concat(res.data);
+      } else {
+        this.showToast().present();
       }
     }, err => {
+      this.showToast().present();
       console.error('ERROR', err);
     });
     return seq;
@@ -80,8 +92,11 @@ export class HomePage {
       // If the API returned a successful response, mark the user as logged in
       if (res.success) {
         this.slideData = res.data;
+      }else{
+        this.showToast().present();
       }
     }, err => {
+      this.showToast().present();
       console.error('ERROR', err);
     });
     return seq;
@@ -94,5 +109,13 @@ export class HomePage {
 
   openPages(url) {
     this.browser.launch(url);
+  }
+
+  showToast() {
+    return this.toastCtrl.create({
+      message: this.networkErrorString,
+      duration: 3000,
+      position: 'top'
+    });
   }
 }

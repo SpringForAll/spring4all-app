@@ -3,9 +3,8 @@ import {SplashScreen} from '@ionic-native/splash-screen';
 import {StatusBar} from '@ionic-native/status-bar';
 import {TranslateService} from '@ngx-translate/core';
 import {Config, Nav, Platform, ToastController} from 'ionic-angular';
-
-import {FirstRunPage} from '../pages/pages';
-import {Settings} from '../providers/providers';
+import {Storage} from '@ionic/storage';
+import {FirstRunPage, MainPage} from '../pages/pages';
 import {TabsPage} from "../pages/tabs/tabs";
 
 @Component({
@@ -13,14 +12,19 @@ import {TabsPage} from "../pages/tabs/tabs";
     <ion-nav [root]="rootPage"></ion-nav>`
 })
 export class MyApp {
-  rootPage = FirstRunPage;
+  rootPage = MainPage;
   backButtonPressed: boolean = false;
 
   @ViewChild(Nav) nav: Nav;
 
-  constructor(private translate: TranslateService, public platform: Platform, public toastCtrl: ToastController,
-              settings: Settings, private config: Config, private statusBar: StatusBar, private splashScreen: SplashScreen) {
-
+  constructor(private translate: TranslateService,
+              public platform: Platform,
+              private toastCtrl: ToastController,
+              public config: Config,
+              public storage: Storage,
+              private statusBar: StatusBar,
+              private splashScreen: SplashScreen) {
+    this.checkLogined();
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
@@ -93,5 +97,14 @@ export class MyApp {
         this.backButtonPressed = false;
       }, 2000)
     }
+  }
+
+  checkLogined(){
+    this.storage.get("token").then(token=>{
+      if(!token){
+        console.log(token)
+        this.rootPage = FirstRunPage;
+      }
+    });
   }
 }

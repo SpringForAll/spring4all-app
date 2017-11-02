@@ -47,11 +47,11 @@
         </button>
       </ion-col>
       <ion-col>
-        <button ion-button icon-left clear small>
+        <button ion-button icon-left clear small [color]="page.like==12?'profile':'dark'">
           <ion-icon name="ios-thumbs-up-outline"></ion-icon>
           <span>{{page.like}}</span>
         </button>
-        <button ion-button icon-left clear small>
+        <button ion-button icon-left clear small [color]="page.commit==101?'profile':'dark'">
           <ion-icon name="ios-text-outline"></ion-icon>
           <span>{{page.commit}}</span>
         </button>
