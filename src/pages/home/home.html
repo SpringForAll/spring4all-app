@@ -25,7 +25,7 @@
       refreshingText="{{'REFRESHING_TEXT' | translate}}">
     </ion-refresher-content>
   </ion-refresher>
-  <ion-slides pager autoplay="3000" speed="1000" loop="true" autoplayDisableOnInteration="true">
+  <ion-slides pager autoplay="3000" effect="fade" speed="1000" loop="true" autoplayDisableOnInteration="false" *ngIf="slideData.length > 1">
     <ion-slide *ngFor="let item of slideData" (click)="openPages(item.url)">
       <img src="{{item.img}}" alt="{{item.title}}">
       <div class="cover"></div>

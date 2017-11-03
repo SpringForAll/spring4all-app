@@ -19,14 +19,16 @@ export class TutorialPage {
   showSkip = true;
   isLogined = false;
   dir: string = 'ltr';
+  deadTime = 3;
 
   constructor(public navCtrl: NavController,
               translate: TranslateService,
               public storage: Storage,
               public platform: Platform) {
     this.dir = platform.dir();
-    if(this.storage.get("token")){
+    if (this.storage.get("token")) {
       this.isLogined = true;
+      this.setTime();
     }
     translate.get(["TUTORIAL_SLIDE1_TITLE",
       "TUTORIAL_SLIDE1_DESCRIPTION",
@@ -68,4 +70,14 @@ export class TutorialPage {
     this.showSkip = !slider.isEnd();
   }
 
+  setTime() {
+    if (this.deadTime == 0) {
+      return this.startApp();
+    } else {
+      this.deadTime--;
+    }
+    setTimeout(() => {
+      this.setTime();
+    }, 1200);
+  }
 }

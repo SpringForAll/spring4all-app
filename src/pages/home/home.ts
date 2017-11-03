@@ -41,10 +41,6 @@ export class HomePage {
     });
   }
 
-  ionViewWillEnter() {
-    this.slides.startAutoplay();
-  }
-
   ionViewWillLeave() {
     this.slides.stopAutoplay();
   }
