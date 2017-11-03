@@ -33,11 +33,11 @@
     </ion-slide>
   </ion-slides>
 
-  <ion-card *ngFor="let page of pages" (click)="openPages(page.url)">
-    <ion-item>
+  <ion-card *ngFor="let page of pages">
+    <ion-item (click)="openPages(page.url)">
       <h2>{{page.title}}</h2>
     </ion-item>
-    <ion-card-content>
+    <ion-card-content (click)="openPages(page.url)">
       <p>{{page.abstract}}</p>
     </ion-card-content>
     <ion-row>

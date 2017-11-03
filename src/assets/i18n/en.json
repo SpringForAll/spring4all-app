@@ -51,5 +51,6 @@
   "REFRESHING_TEXT": "Refreshing...",
   "PULLING_TEXT":"Pull to refresh",
   "BANK_TEXT":"back",
-  "NETWORK_ERROR":"network may be have error"
+  "NETWORK_ERROR":"network may be have error",
+  "ADVERT_TXT":"advert"
 }
