@@ -27,7 +27,7 @@
 <ion-content no-bounce *ngIf="isLogined">
   <ion-slides>
     <ion-slide>
-      <button ion-button outline class="time" (click)="startApp()">广告{{deadTime}}</button>
+      <button ion-button outline class="time" disabled>{{ 'ADVERT_TXT' | translate }}{{deadTime}}</button>
       <img src="assets/img/advert.png"/>
     </ion-slide>
   </ion-slides>

@@ -1,6 +1,5 @@
 import {Component} from '@angular/core';
 import {IonicPage, NavController, Platform} from 'ionic-angular';
-import {Storage} from '@ionic/storage';
 import {TranslateService} from '@ngx-translate/core';
 
 export interface Slide {
@@ -17,19 +16,15 @@ export interface Slide {
 export class TutorialPage {
   slides: Slide[];
   showSkip = true;
-  isLogined = false;
+  isLogined:boolean = true;
   dir: string = 'ltr';
-  deadTime = 3;
+  deadTime = 4;
 
   constructor(public navCtrl: NavController,
               translate: TranslateService,
-              public storage: Storage,
               public platform: Platform) {
     this.dir = platform.dir();
-    if (this.storage.get("token")) {
-      this.isLogined = true;
-      this.setTime();
-    }
+    this.setTime();
     translate.get(["TUTORIAL_SLIDE1_TITLE",
       "TUTORIAL_SLIDE1_DESCRIPTION",
       "TUTORIAL_SLIDE2_TITLE",
@@ -53,17 +48,10 @@ export class TutorialPage {
   }
 
   startApp() {
-    if (this.isLogined) {
-      this.navCtrl.setRoot('TabsPage', {}, {
-        animate: true,
-        direction: 'forward'
-      });
-    } else {
-      this.navCtrl.setRoot('LoginPage', {}, {
-        animate: true,
-        direction: 'forward'
-      });
-    }
+    this.navCtrl.setRoot('TabsPage', {}, {
+      animate: true,
+      direction: 'forward'
+    });
   }
 
   onSlideChangeStart(slider) {

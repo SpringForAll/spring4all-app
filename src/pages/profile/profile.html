@@ -9,10 +9,77 @@
   <ion-navbar>
     <ion-title>{{"PROFILE_TITLE" | translate}}</ion-title>
   </ion-navbar>
-
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
+  <ion-item class="profile-avatar">
+    <ion-avatar item-start>
+      <img src="{{profile.avatar}}">
+    </ion-avatar>
+    <span>{{profile.userName}} &nbsp;&nbsp;</span>
+    <ion-icon name="male" *ngIf="profile.sex==0"></ion-icon>
+    <ion-icon name="female" *ngIf="profile.sex!=0"></ion-icon>
+  </ion-item>
+  <ion-grid>
+    <ion-row wrap>
+      <ion-col text-center tappable col-3>
+        <span class="profile-title">123</span>
+        <ion-note>文章</ion-note>
+      </ion-col>
+      <ion-col text-center tappable col-3>
+        <span class="profile-title">66</span>
+        <ion-note>提问</ion-note>
+      </ion-col>
+      <ion-col text-center tappable col-3>
+        <span class="profile-title">9</span>
+        <ion-note>关注</ion-note>
+      </ion-col>
+      <ion-col text-center tappable col-3>
+        <span class="profile-title">59</span>
+        <ion-note>粉丝</ion-note>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-item-group>
+    <ion-item-divider color="light"></ion-item-divider>
+    <button ion-item>
+      <ion-icon name="leaf" item-start></ion-icon>
+      <ion-label>我的文章</ion-label>
+      <ion-note item-end>12</ion-note>
+    </button>
+    <button ion-item>
+      <ion-icon name="leaf" item-start></ion-icon>
+      <ion-label>我的消息</ion-label>
+      <ion-note item-end>12</ion-note>
+    </button>
+    <button ion-item>
+      <ion-icon name="leaf" item-start></ion-icon>
+      <ion-label>我的提问</ion-label>
+      <ion-note item-end>12</ion-note>
+    </button>
+  </ion-item-group>
+
+  <ion-item-group>
+    <ion-item-divider color="light"></ion-item-divider>
+    <ion-item>
+      <ion-icon name="plane" item-start></ion-icon>
+      <ion-label>夜间模式</ion-label>
+      <ion-toggle color="secondary"></ion-toggle>
+    </ion-item>
+  </ion-item-group>
+
+  <ion-item-group>
+    <ion-item-divider color="light"></ion-item-divider>
+    <button ion-item>
+      <ion-icon name="leaf" item-start></ion-icon>
+      <ion-label>赞助社区</ion-label>
+    </button>
+    <button ion-item>
+      <ion-icon name="leaf" item-start></ion-icon>
+      <ion-label>帮助与反馈</ion-label>
+    </button>
+  </ion-item-group>
 
 </ion-content>
