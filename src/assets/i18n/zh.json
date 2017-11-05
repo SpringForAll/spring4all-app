@@ -7,8 +7,8 @@
   "FORGET": "忘记密码",
   "SIGNUP": "注册",
   "TAB1_TITLE": "发现",
-  "TAB2_TITLE": "话题",
-  "TAB3_TITLE": "发起",
+  "TAB2_TITLE": "发起",
+  "TAB3_TITLE": "话题",
   "TAB4_TITLE": "我的",
   "HOME_TITLE": "发现",
   "CHAT_TITLE": "话题",
@@ -52,5 +52,7 @@
   "PULLING_TEXT":"下拉刷新",
   "BANK_TEXT":"返回",
   "NETWORK_ERROR":"网络好像不通了(⊙o⊙)",
-  "ADVERT_TXT":"广告"
+  "ADVERT_TXT":"广告",
+  "QUESTION_TXT":"问答",
+  "HOTTIP_TXT":"热门"
 }

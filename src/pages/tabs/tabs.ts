@@ -32,7 +32,7 @@ export class TabsPage {
   tab3Title = " ";
   tab4Title = " ";
 
-  tab2Badge = 0;
+  tab3Badge = 0;
 
   constructor(public navCtrl: NavController, public translateService: TranslateService) {
     translateService.get(['TAB1_TITLE', 'TAB2_TITLE', 'TAB3_TITLE','TAB4_TITLE']).subscribe(values => {
@@ -41,6 +41,6 @@ export class TabsPage {
       this.tab3Title = values['TAB3_TITLE'];
       this.tab4Title = values['TAB4_TITLE'];
     });
-    this.tab2Badge = 2;
+    this.tab3Badge = 2;
   }
 }

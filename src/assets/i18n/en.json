@@ -11,8 +11,8 @@
   "TAB3_TITLE": "Settings",
   "TAB4_TITLE": "Profile",
   "HOME_TITLE": "HOME",
-  "CHAT_TITLE": "CHAT",
-  "NEWS_TITLE": "NEWS",
+  "CHAT_TITLE": "NEWS",
+  "NEWS_TITLE": "CHAT",
   "PROFILE_TITLE": "PROFILE",
   "MAP_TITLE": "Map",
   "TUTORIAL_SKIP_BUTTON": "Skip",
@@ -52,5 +52,7 @@
   "PULLING_TEXT":"Pull to refresh",
   "BANK_TEXT":"back",
   "NETWORK_ERROR":"network may be have error",
-  "ADVERT_TXT":"advert"
+  "ADVERT_TXT":"advert",
+  "QUESTION_TXT":"QUESTION",
+  "HOTTIP_TXT":"HOTTIP"
 }

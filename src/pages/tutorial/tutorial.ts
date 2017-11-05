@@ -59,13 +59,14 @@ export class TutorialPage {
   }
 
   setTime() {
-    if (this.deadTime == 0) {
+    if (this.deadTime == 2) {
+      this.deadTime--;
       return this.startApp();
     } else {
       this.deadTime--;
     }
     setTimeout(() => {
       this.setTime();
-    }, 1200);
+    }, 1000);
   }
 }
