@@ -33,7 +33,19 @@ page-home {
     font-size: 1.5rem;
   }
 
-  .user-span{
+  .user-span span{
     color: #b2b2b2;
+  }
+
+
+  ion-label{
+    white-space: normal;
+  }
+  .note-ios{
+    color: #6b6b6b;
+  }
+
+  .button-small-ios {
+    padding: 0 0em;
   }
 }

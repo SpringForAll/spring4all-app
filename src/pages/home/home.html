@@ -25,38 +25,34 @@
       refreshingText="{{'REFRESHING_TEXT' | translate}}">
     </ion-refresher-content>
   </ion-refresher>
-  <ion-slides pager autoplay="3000" effect="fade" speed="1000" loop="true" autoplayDisableOnInteration="false" *ngIf="slideData.length > 1">
+  <ion-slides pager autoplay="3000" effect="fade" speed="1000" loop="true" autoplayDisableOnInteration="false"
+              *ngIf="slideData.length > 1">
     <ion-slide *ngFor="let item of slideData" (click)="openPages(item.url)">
       <img src="{{item.img}}" alt="{{item.title}}">
       <div class="cover"></div>
       <span class="title">{{item.title}}</span>
     </ion-slide>
   </ion-slides>
-  <ion-card *ngFor="let page of pages">
-    <ion-item (click)="openPages(page.url)">
+
+  <ion-list>
+    <ion-item *ngFor="let page of pages" (click)="openPages(page.url)">
       <h2>{{page.title}}</h2>
-    </ion-item>
-    <ion-card-content (click)="openPages(page.url)">
-      <p>{{page.abstract}}</p>
-    </ion-card-content>
-    <ion-row>
-      <ion-col>
+      <ion-note>{{page.abstract}}</ion-note>
+      <div class="user-span">
         <button ion-button clear small>
-          <span class="user-span">{{page.time}}</span>
+          <span>{{page.time}}</span>
         </button>
-      </ion-col>
-      <ion-col>
-        <button ion-button icon-left clear small [color]="page.like==12?'profile':'dark'">
+        <button ion-button icon-left clear small style="float: right">
           <ion-icon name="ios-thumbs-up-outline"></ion-icon>
           <span>{{page.like}}</span>
         </button>
-        <button ion-button icon-left clear small [color]="page.commit==101?'profile':'dark'">
+        <button ion-button icon-left clear small style="float: right">
           <ion-icon name="ios-text-outline"></ion-icon>
           <span>{{page.commit}}</span>
         </button>
-      </ion-col>
-    </ion-row>
-  </ion-card>
+      </div>
+    </ion-item>
+  </ion-list>
 
   <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
     <ion-infinite-scroll-content
