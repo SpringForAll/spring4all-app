@@ -1,5 +1,6 @@
-import {Component} from '@angular/core';
-import {IonicPage, NavController, NavParams} from 'ionic-angular';
+import { Component } from '@angular/core';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Browser } from '../../providers/providers';
 
 /**
  * Generated class for the ProfilePage page.
@@ -14,7 +15,9 @@ import {IonicPage, NavController, NavParams} from 'ionic-angular';
 })
 export class ProfilePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController,
+    public navParams: NavParams,
+    public browser: Browser) {
   }
   items = [
     'Fallout',
@@ -26,8 +29,13 @@ export class ProfilePage {
   }
 
   profile = {
-    "avatar":"http://jxjy.gsres.cn/uploads/honeybee/data/upload/group/b_group_avatar_5786.jpg",
-    "userName":"杨小强",
-    "sex":0
+    "avatar": "http://jxjy.gsres.cn/uploads/honeybee/data/upload/group/b_group_avatar_5786.jpg",
+    "userName": "杨小强",
+    "sex": 0
+  }
+
+  openProjects() {
+    let url = 'http://spring4all.com/projects';
+    this.browser.launch(url);
   }
 }

@@ -21,7 +21,6 @@ export class HomePage {
 
   slideData: Array<any> = [];
   pages: Array<any> = [];
-  loadError: string = ' ';
   private networkErrorString: string;
 
   constructor(public translateService: TranslateService,
@@ -33,9 +32,6 @@ export class HomePage {
               public browser: Browser) {
     this.getSlides();
     this.getPages();
-    this.translateService.get('NETWORK_ERROR').subscribe((value) => {
-      this.loadError = value;
-    });
     this.translateService.get('NETWORK_ERROR').subscribe((value) => {
       this.networkErrorString = value;
     });

@@ -10,21 +10,53 @@
       <ion-segment-button value="question">
         {{'QUESTION_TXT'| translate}}
       </ion-segment-button>
-      <ion-segment-button value="hot">
+      <ion-segment-button value="hottip">
         {{'HOTTIP_TXT'| translate}}
       </ion-segment-button>
     </ion-segment>
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
   <div [ngSwitch]="type">
     <ion-list *ngSwitchCase="'question'">
-      
+      <ion-item *ngFor="let question of questions" (click)="openQuestion(question.url)">
+        <h2>{{question.title}}</h2>
+        <ion-note>{{question.abstract}}</ion-note>
+        <div class="user-span">
+          <button ion-button clear small>
+            <span>{{question.time}}</span>
+          </button>
+          <button ion-button icon-left clear small class="buttom-btn">
+            <ion-icon name="ios-thumbs-up-outline"></ion-icon>
+            <span>{{question.like}}</span>
+          </button>
+          <button ion-button icon-left clear small class="buttom-btn">
+            <ion-icon name="ios-text-outline"></ion-icon>
+            <span>{{question.commit}}</span>
+          </button>
+        </div>
+      </ion-item>
     </ion-list>
 
-    <ion-list *ngSwitchCase="'hot'">
-
+    <ion-list *ngSwitchCase="'hottip'">
+      <ion-item *ngFor="let hottip of hotTips" (click)="openHottip(page.url)">
+        <h2>{{hottip.title}}</h2>
+        <ion-note>{{hottip.abstract}}</ion-note>
+        <div class="user-span">
+          <button ion-button clear small>
+            <span>{{hottip.time}}</span>
+          </button>
+          <button ion-button icon-left clear small class="buttom-btn">
+            <ion-icon name="ios-thumbs-up-outline"></ion-icon>
+            <span>{{hottip.like}}</span>
+          </button>
+          <button ion-button icon-left clear small class="buttom-btn">
+            <ion-icon name="ios-text-outline"></ion-icon>
+            <span>{{hottip.commit}}</span>
+          </button>
+        </div>
+      </ion-item>
     </ion-list>
   </div>
-</ion-content>  
+</ion-content>

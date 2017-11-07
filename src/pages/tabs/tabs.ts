@@ -32,15 +32,15 @@ export class TabsPage {
   tab3Title = " ";
   tab4Title = " ";
 
-  tab3Badge = 0;
+  tab4Badge = 0;
 
   constructor(public navCtrl: NavController, public translateService: TranslateService) {
-    translateService.get(['TAB1_TITLE', 'TAB2_TITLE', 'TAB3_TITLE','TAB4_TITLE']).subscribe(values => {
-      this.tab1Title = values['TAB1_TITLE'];
-      this.tab2Title = values['TAB2_TITLE'];
-      this.tab3Title = values['TAB3_TITLE'];
-      this.tab4Title = values['TAB4_TITLE'];
+    translateService.get(['HOME_TITLE', 'CHAT_TITLE', 'NEWS_TITLE','PROFILE_TITLE']).subscribe(values => {
+      this.tab1Title = values['HOME_TITLE'];
+      this.tab2Title = values['NEWS_TITLE'];
+      this.tab3Title = values['CHAT_TITLE'];
+      this.tab4Title = values['PROFILE_TITLE'];
     });
-    this.tab3Badge = 2;
+    this.tab4Badge = 2;
   }
 }

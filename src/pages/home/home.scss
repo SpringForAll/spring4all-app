@@ -1,7 +1,5 @@
 page-home {
-  .card-content-ios{
-    padding-bottom: 0px;
-  }
+
   ion-slides {
     height: 30%;
     .cover {
@@ -47,5 +45,10 @@ page-home {
 
   .button-small-ios {
     padding: 0 0em;
+  }
+
+  .buttom-btn{
+    float: right;
+    padding-right: 10px
   }
 }

@@ -32,6 +32,7 @@ export class NewsPage {
     });
     this.getQuestions();
     this.getHotTips();
+    console.log(this.hotTips)
   }
 
   getQuestions() {

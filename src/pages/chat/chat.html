@@ -12,7 +12,50 @@
 
 </ion-header>
 
+<ion-content>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="{{'PULLING_TEXT'| translate}}"
+      refreshingSpinner="circles"
+      refreshingText="{{'REFRESHING_TEXT' | translate}}">
+    </ion-refresher-content>
+  </ion-refresher>
 
-<ion-content padding>
+  <ion-card *ngFor="let page of datas">
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="https://avatars2.githubusercontent.com/u/12113222">
+      </ion-avatar>
+      <h2>{{page.title}}</h2>
+    </ion-item>
+    <ion-card-content (click)="openPages(page.url)">
+      <p>{{page.abstract}}</p>
+    </ion-card-content>
+    <ion-row>
+      <ion-col>
+        <button ion-button clear small class="user-span">
+          <span>{{page.time}}</span>
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button icon-left clear small class="user-span">
+          <ion-icon name="ios-thumbs-up-outline"></ion-icon>
+          <span>{{page.like}}</span>
+        </button>
+        <button ion-button icon-left clear small class="user-span">
+          <ion-icon name="ios-text-outline"></ion-icon>
+          <span>{{page.commit}}</span>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="{{'LOADING_TEXT' | translate}}">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
 
 </ion-content>
