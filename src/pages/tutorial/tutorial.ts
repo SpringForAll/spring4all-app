@@ -18,7 +18,7 @@ export class TutorialPage {
   showSkip = true;
   isLogined:boolean = true;
   dir: string = 'ltr';
-  deadTime = 4;
+  deadTime = 3;
 
   constructor(public navCtrl: NavController,
               translate: TranslateService,
