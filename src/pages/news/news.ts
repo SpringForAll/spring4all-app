@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import { Api } from "../../providers/api/api"
 import { TranslateService } from '@ngx-translate/core';
+import { Browser } from '../../providers/providers';
 
 /**
  * Generated class for the NewsPage page.
@@ -26,6 +27,7 @@ export class NewsPage {
     public navParams: NavParams,
     public translateService: TranslateService,
     public toastCtrl: ToastController,
+    public browser: Browser,
     public api: Api) {
     this.translateService.get('NETWORK_ERROR').subscribe((value) => {
       this.networkErrorString = value;
@@ -80,4 +82,7 @@ export class NewsPage {
     });
   }
 
+  openPages(url) {
+    this.browser.launch(url);
+  }
 }

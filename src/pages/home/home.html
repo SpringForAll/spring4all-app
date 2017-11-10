@@ -36,8 +36,8 @@
 
   <ion-list>
     <ion-item *ngFor="let page of pages" (click)="openPages(page.url)">
-      <h2>{{page.title}}</h2>
-      <ion-note>{{page.abstract}}</ion-note>
+      <h3>{{page.title}}</h3>
+      <p>{{page.abstract}}</p>
       <div class="user-span">
         <button ion-button clear small>
           <span>{{page.time}}</span>

@@ -20,9 +20,9 @@
 <ion-content>
   <div [ngSwitch]="type">
     <ion-list *ngSwitchCase="'question'">
-      <ion-item *ngFor="let question of questions" (click)="openQuestion(question.url)">
-        <h2>{{question.title}}</h2>
-        <ion-note>{{question.abstract}}</ion-note>
+      <ion-item *ngFor="let question of questions" (click)="openPages(question.url)">
+        <h3>{{question.title}}</h3>
+        <p>{{question.abstract}}</p>
         <div class="user-span">
           <button ion-button clear small>
             <span>{{question.time}}</span>
@@ -40,7 +40,7 @@
     </ion-list>
 
     <ion-list *ngSwitchCase="'hottip'">
-      <ion-item *ngFor="let hottip of hotTips" (click)="openHottip(page.url)">
+      <ion-item *ngFor="let hottip of hotTips" (click)="openPages(page.url)">
         <h2>{{hottip.title}}</h2>
         <ion-note>{{hottip.abstract}}</ion-note>
         <div class="user-span">
