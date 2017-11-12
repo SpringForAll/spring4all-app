@@ -80,7 +80,7 @@ export class HomePage {
       // If the API returned a successful response, mark the user as logged in
       if (res.success) {
         this.slideData = res.data;
-      }else{
+      } else {
         this.showToast().present();
       }
     }, err => {

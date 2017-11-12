@@ -45,10 +45,10 @@
   "SEARCH_TITLE": "Search page and question",
   "LOADING_TEXT": "Loading more data...",
   "REFRESHING_TEXT": "Refreshing...",
-  "PULLING_TEXT":"Pull to refresh",
-  "BANK_TEXT":"back",
-  "NETWORK_ERROR":"network may be have error",
-  "ADVERT_TXT":"advert",
-  "QUESTION_TXT":"QUESTION",
-  "HOTTIP_TXT":"HOTTIP"
+  "PULLING_TEXT": "Pull to refresh",
+  "BANK_TEXT": "back",
+  "NETWORK_ERROR": "network may be have error",
+  "ADVERT_TXT": "advert",
+  "QUESTION_TXT": "QUESTION",
+  "HOTTIP_TXT": "HOTTIP"
 }

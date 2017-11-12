@@ -28,7 +28,6 @@
     "@ionic/storage": "2.0.1",
     "@ngx-translate/core": "8.0.0",
     "@ngx-translate/http-loader": "^2.0.0",
-    "ng-jhipster": "0.2.12",
     "cordova-android": "6.3.0",
     "cordova-hot-code-push-local-dev-addon": "^0.4.2",
     "cordova-hot-code-push-plugin": "^1.5.3",

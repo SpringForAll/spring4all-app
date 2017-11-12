@@ -6,29 +6,20 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content no-bounce *ngIf="!isLogined">
+<ion-content no-bounce>
   <ion-slides pager="true" dir="{{dir}}" (ionSlideWillChange)="onSlideChangeStart($event)">
     <ion-slide *ngFor="let slide of slides">
-      <img [src]="slide.image" class="slide-image" />
+      <img [src]="slide.image" class="slide-image"/>
       <h2 class="slide-title" [innerHTML]="slide.title"></h2>
       <p [innerHTML]="slide.description"></p>
     </ion-slide>
     <ion-slide>
-      <img src="assets/img/ica-slidebox-img-3.png" class="slide-image" />
+      <img src="assets/img/ica-slidebox-img-3.png" class="slide-image"/>
       <h2 class="slide-title">{{ 'TUTORIAL_SLIDE3_TITLE' | translate }}</h2>
       <button ion-button icon-end large clear (click)="startApp()">
         {{ 'TUTORIAL_CONTINUE_BUTTON' | translate }}
         <ion-icon name="arrow-forward"></ion-icon>
       </button>
-    </ion-slide>
-  </ion-slides>
-</ion-content>
-
-<ion-content no-bounce *ngIf="isLogined">
-  <ion-slides>
-    <ion-slide>
-      <button ion-button outline class="time" disabled>{{ 'ADVERT_TXT' | translate }}{{deadTime}}</button>
-      <img src="assets/img/advert.png"/>
     </ion-slide>
   </ion-slides>
 </ion-content>

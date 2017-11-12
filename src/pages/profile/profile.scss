@@ -3,10 +3,10 @@ page-profile {
     padding-bottom: 10px;
     padding-top: 10px;
     border-bottom: 0.55px solid rgb(200, 199, 204);
-    .item-inner{
+    .item-inner {
       border-bottom: none !important;
     }
-    span{
+    span {
       font-size: 20px;
       color: #767676;
     }
@@ -15,7 +15,7 @@ page-profile {
   ion-item-divider {
     min-height: 20px;
   }
-  .item-ios{
+  .item-ios {
     color: #767676;
   }
   .item-ios ion-avatar img {
@@ -23,7 +23,7 @@ page-profile {
     height: 60px;
   }
 
-  .profile-title{
+  .profile-title {
     display: block;
     font-size: 20px;
     margin-bottom: 5px;

@@ -1,8 +1,8 @@
-import { NgModule } from '@angular/core';
-import { TranslateModule } from '@ngx-translate/core';
-import { IonicPageModule } from 'ionic-angular';
+import {NgModule} from '@angular/core';
+import {TranslateModule} from '@ngx-translate/core';
+import {IonicPageModule} from 'ionic-angular';
 
-import { TabsPage } from './tabs';
+import {TabsPage} from './tabs';
 
 @NgModule({
   declarations: [
@@ -16,4 +16,5 @@ import { TabsPage } from './tabs';
     TabsPage
   ]
 })
-export class TabsPageModule { }
+export class TabsPageModule {
+}

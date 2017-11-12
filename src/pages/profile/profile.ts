@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { Browser } from '../../providers/providers';
+import {Component} from '@angular/core';
+import {IonicPage, NavController, NavParams} from 'ionic-angular';
+import {Browser} from '../../providers/providers';
+import {User} from "../../providers/user/user";
 
 /**
  * Generated class for the ProfilePage page.
@@ -15,23 +16,18 @@ import { Browser } from '../../providers/providers';
 })
 export class ProfilePage {
 
+  private profile:any;
+
   constructor(public navCtrl: NavController,
-    public navParams: NavParams,
-    public browser: Browser) {
-  }
-  items = [
-    'Fallout',
-    'GTA',
-    'Halo'
-  ];
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ProfilePage');
+              public navParams: NavParams,
+              private user: User,
+              public browser: Browser) {
+    this.profile = this.user._user;
+    console.log(this.profile)
   }
 
-  profile = {
-    "avatar": "http://jxjy.gsres.cn/uploads/honeybee/data/upload/group/b_group_avatar_5786.jpg",
-    "userName": "杨小强",
-    "sex": 0
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad ProfilePage');
   }
 
   openProjects() {

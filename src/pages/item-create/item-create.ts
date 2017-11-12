@@ -1,7 +1,7 @@
-import { Component, ViewChild } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Camera } from '@ionic-native/camera';
-import { IonicPage, NavController, ViewController } from 'ionic-angular';
+import {Component, ViewChild} from '@angular/core';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {Camera} from '@ionic-native/camera';
+import {IonicPage, NavController, ViewController} from 'ionic-angular';
 
 @IonicPage()
 @Component({
@@ -41,7 +41,7 @@ export class ItemCreatePage {
         targetWidth: 96,
         targetHeight: 96
       }).then((data) => {
-        this.form.patchValue({ 'profilePic': 'data:image/jpg;base64,' + data });
+        this.form.patchValue({'profilePic': 'data:image/jpg;base64,' + data});
       }, (err) => {
         alert('Unable to take photo');
       })
@@ -55,7 +55,7 @@ export class ItemCreatePage {
     reader.onload = (readerEvent) => {
 
       let imageData = (readerEvent.target as any).result;
-      this.form.patchValue({ 'profilePic': imageData });
+      this.form.patchValue({'profilePic': imageData});
     };
 
     reader.readAsDataURL(event.target.files[0]);
@@ -77,7 +77,9 @@ export class ItemCreatePage {
    * back to the presenter.
    */
   done() {
-    if (!this.form.valid) { return; }
+    if (!this.form.valid) {
+      return;
+    }
     this.viewCtrl.dismiss(this.form.value);
   }
 }

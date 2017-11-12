@@ -16,15 +16,12 @@ export interface Slide {
 export class TutorialPage {
   slides: Slide[];
   showSkip = true;
-  isLogined:boolean = true;
   dir: string = 'ltr';
-  deadTime = 3;
 
   constructor(public navCtrl: NavController,
               translate: TranslateService,
               public platform: Platform) {
     this.dir = platform.dir();
-    this.setTime();
     translate.get(["TUTORIAL_SLIDE1_TITLE",
       "TUTORIAL_SLIDE1_DESCRIPTION",
       "TUTORIAL_SLIDE2_TITLE",
@@ -48,7 +45,7 @@ export class TutorialPage {
   }
 
   startApp() {
-    this.navCtrl.setRoot('TabsPage', {}, {
+    this.navCtrl.setRoot('LoginPage', {}, {
       animate: true,
       direction: 'forward'
     });
@@ -56,17 +53,5 @@ export class TutorialPage {
 
   onSlideChangeStart(slider) {
     this.showSkip = !slider.isEnd();
-  }
-
-  setTime() {
-    if (this.deadTime == 2) {
-      this.deadTime--;
-      return this.startApp();
-    } else {
-      this.deadTime--;
-    }
-    setTimeout(() => {
-      this.setTime();
-    }, 1000);
   }
 }

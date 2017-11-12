@@ -13,6 +13,7 @@ import {Constant} from '../constant/constant';
 @Injectable()
 export class Browser {
 
+  target: string = '_blank';
   private options: any = {
     statusbar: {
       color: this.constant.colors_primary
@@ -32,26 +33,24 @@ export class Browser {
       event: 'backPressed'
     },
     backButtonCanClose: true
-   /* menu: {
-      image: 'share',
-      imagePressed: 'menu_pressed',
-      title: '分享',
-      cancel: '取消',
-      align: 'right',
-      items: [
-        {
-          event: 'helloPressed',
-          label: 'Hello World!'
-        },
-        {
-          event: 'testPressed',
-          label: 'Test!'
-        }
-      ]
-    }*/
+    /* menu: {
+       image: 'share',
+       imagePressed: 'menu_pressed',
+       title: '分享',
+       cancel: '取消',
+       align: 'right',
+       items: [
+         {
+           event: 'helloPressed',
+           label: 'Hello World!'
+         },
+         {
+           event: 'testPressed',
+           label: 'Test!'
+         }
+       ]
+     }*/
   };
-
-  target: string = '_blank';
 
   constructor(public constant: Constant) {
   }

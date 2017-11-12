@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
-import {IonicPage, NavController, NavParams, ToastController, ModalController} from 'ionic-angular';
-import { TranslateService } from '@ngx-translate/core';
-import { Api } from '../../providers/providers';
+import {IonicPage, ModalController, NavController, NavParams, ToastController} from 'ionic-angular';
+import {TranslateService} from '@ngx-translate/core';
+import {Api} from '../../providers/providers';
 
 /**
  * Generated class for the ChatPage page.
@@ -22,13 +22,13 @@ export class ChatPage {
   private networkErrorString: string;
 
   constructor(public translateService: TranslateService,
-    public navCtrl: NavController,
-    public navParams: NavParams,
-    public api: Api,
-    public toastCtrl: ToastController,
-    public modalController: ModalController) {
-      this.getDatas();
-    }
+              public navCtrl: NavController,
+              public navParams: NavParams,
+              public api: Api,
+              public toastCtrl: ToastController,
+              public modalController: ModalController) {
+    this.getDatas();
+  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ChatPage');

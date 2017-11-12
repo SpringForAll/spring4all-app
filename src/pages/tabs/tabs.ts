@@ -1,11 +1,8 @@
 import {Component, ViewChild} from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
+import {TranslateService} from '@ngx-translate/core';
 import {IonicPage, NavController, Tabs} from 'ionic-angular';
 
-import { Tab1Root } from '../pages';
-import { Tab2Root } from '../pages';
-import { Tab3Root } from '../pages';
-import { Tab4Root } from '../pages';
+import {Tab1Root, Tab2Root, Tab3Root, Tab4Root} from '../pages';
 
 /**
  * Generated class for the TabsPage tabs.
@@ -20,7 +17,7 @@ import { Tab4Root } from '../pages';
   templateUrl: 'tabs.html'
 })
 export class TabsPage {
-  @ViewChild('mainTabs') tabs:Tabs;
+  @ViewChild('mainTabs') tabs: Tabs;
 
   tab1Root: any = Tab1Root;
   tab2Root: any = Tab2Root;
@@ -35,7 +32,7 @@ export class TabsPage {
   tab4Badge = 0;
 
   constructor(public navCtrl: NavController, public translateService: TranslateService) {
-    translateService.get(['HOME_TITLE', 'CHAT_TITLE', 'NEWS_TITLE','PROFILE_TITLE']).subscribe(values => {
+    translateService.get(['HOME_TITLE', 'CHAT_TITLE', 'NEWS_TITLE', 'PROFILE_TITLE']).subscribe(values => {
       this.tab1Title = values['HOME_TITLE'];
       this.tab2Title = values['NEWS_TITLE'];
       this.tab3Title = values['CHAT_TITLE'];

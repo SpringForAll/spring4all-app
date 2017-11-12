@@ -1,8 +1,8 @@
 import 'rxjs/add/operator/toPromise';
 
-import { Injectable } from '@angular/core';
-
-import { Api } from '../api/api';
+import {Injectable} from '@angular/core';
+import {Storage} from '@ionic/storage';
+import {Api} from '../api/api';
 
 /**
  * Most apps have the concept of a User. This is a simple provider
@@ -26,8 +26,12 @@ import { Api } from '../api/api';
 @Injectable()
 export class User {
   _user: any;
+  _token: string;
 
-  constructor(public api: Api) { }
+  constructor(public api: Api,
+              private storage: Storage) {
+    this.init();
+  }
 
   /**
    * Send a POST request to our login endpoint with the data
@@ -79,5 +83,24 @@ export class User {
    */
   _loggedIn(resp) {
     this._user = resp.data;
+    this._token = resp.data.token;
+    this.storage.set("user", this._user);
+  }
+
+  getToken() {
+    return this.storage.get("user").then(res => {
+      if(res){
+        return res.token;
+      }
+    })
+  }
+
+  init(){
+    this.storage.get("user").then(res => {
+      if(res){
+        this._user = res;
+        this._token = res.token;
+      }
+    })
   }
 }

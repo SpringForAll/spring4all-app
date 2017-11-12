@@ -3,15 +3,16 @@ import {SplashScreen} from '@ionic-native/splash-screen';
 import {StatusBar} from '@ionic-native/status-bar';
 import {TranslateService} from '@ngx-translate/core';
 import {Config, Nav, Platform, ToastController} from 'ionic-angular';
-import {FirstRunPage} from '../pages/pages';
+import {AdvertPage, FirstRunPage} from '../pages/pages';
 import {TabsPage} from "../pages/tabs/tabs";
+import {User} from '../providers/providers';
 
 @Component({
   template: `
     <ion-nav [root]="rootPage"></ion-nav>`
 })
 export class MyApp {
-  rootPage = FirstRunPage;
+  rootPage: any;
   backButtonPressed: boolean = false;
 
   @ViewChild(Nav) nav: Nav;
@@ -21,6 +22,7 @@ export class MyApp {
               private toastCtrl: ToastController,
               public config: Config,
               private statusBar: StatusBar,
+              private user: User,
               private splashScreen: SplashScreen) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
@@ -28,6 +30,7 @@ export class MyApp {
       this.statusBar.hide();
       this.splashScreen.hide();
       this.registerBackButtonAction();
+      this.registerAuthentication();
     });
     this.initTranslate();
   }
@@ -52,6 +55,15 @@ export class MyApp {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
+  }
+
+  registerAuthentication() {
+    this.user.getToken().then(token => {
+      if (token) {
+        return this.rootPage = AdvertPage;
+      }
+      return this.rootPage = FirstRunPage;
+    });
   }
 
   registerBackButtonAction() {

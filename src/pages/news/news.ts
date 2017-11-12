@@ -1,8 +1,8 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
-import { Api } from "../../providers/api/api"
-import { TranslateService } from '@ngx-translate/core';
-import { Browser } from '../../providers/providers';
+import {Component} from '@angular/core';
+import {IonicPage, NavController, NavParams, ToastController} from 'ionic-angular';
+import {Api} from "../../providers/api/api"
+import {TranslateService} from '@ngx-translate/core';
+import {Browser} from '../../providers/providers';
 
 /**
  * Generated class for the NewsPage page.
@@ -24,11 +24,11 @@ export class NewsPage {
   private networkErrorString: string;
 
   constructor(public navCtrl: NavController,
-    public navParams: NavParams,
-    public translateService: TranslateService,
-    public toastCtrl: ToastController,
-    public browser: Browser,
-    public api: Api) {
+              public navParams: NavParams,
+              public translateService: TranslateService,
+              public toastCtrl: ToastController,
+              public browser: Browser,
+              public api: Api) {
     this.translateService.get('NETWORK_ERROR').subscribe((value) => {
       this.networkErrorString = value;
     });
@@ -38,7 +38,7 @@ export class NewsPage {
   }
 
   getQuestions() {
-    let param = { 'key': 'value' }
+    let param = {'key': 'value'}
     let seq = this.api.get('questions', param).share();
     seq.subscribe((res: any) => {
       // If the API returned a successful response, mark the user as logged in

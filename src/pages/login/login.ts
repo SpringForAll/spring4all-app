@@ -43,8 +43,6 @@ export class LoginPage {
   doLogin() {
     this.user.login(this.account).subscribe((resp: any) => {
       if (resp.success) {
-        this.storage.set("token", resp.data.token);
-        this.storage.set("user", resp.data);
         this.navCtrl.push(MainPage);
       } else {
         let toast = this.toastCtrl.create({
