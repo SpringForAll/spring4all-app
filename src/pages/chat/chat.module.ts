@@ -9,7 +9,7 @@ import {TranslateModule} from '@ngx-translate/core';
   ],
   imports: [
     IonicPageModule.forChild(ChatPage),
-    TranslateModule.forChild(ChatPage)
+    TranslateModule.forChild()
   ],
 })
 export class ChatPageModule {

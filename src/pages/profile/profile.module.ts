@@ -9,7 +9,7 @@ import {TranslateModule} from '@ngx-translate/core';
   ],
   imports: [
     IonicPageModule.forChild(ProfilePage),
-    TranslateModule.forChild(ProfilePage)
+    TranslateModule.forChild()
   ],
 })
 export class ProfilePageModule {

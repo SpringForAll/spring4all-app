@@ -1,6 +1,6 @@
 import {Injectable, Injector} from '@angular/core';
 import 'rxjs/add/operator/map';
-import {HttpEvent, HttpHandler, HttpInterceptor, HttpRequest, HttpResponse} from "@angular/common/http";
+import {HttpEvent, HttpHandler, HttpInterceptor, HttpRequest} from "@angular/common/http";
 import {Observable} from "rxjs/Observable";
 import {User} from "../user/user";
 import {NavController} from "ionic-angular";
@@ -30,7 +30,7 @@ export class JwtInterceptorProvider implements HttpInterceptor {
       }
     });
     return next.handle(req).map(event => {
-      if (event instanceof HttpResponse) {
+      /* if (event instanceof HttpResponse) {
         if (event.status === 401 || event.status === 403) {
           return this.user.refreshToken().then((data) => {
             if (data.token !== '') {
@@ -52,7 +52,7 @@ export class JwtInterceptorProvider implements HttpInterceptor {
         } else {
           return Observable.throw(event);
         }
-      }
+      } */
       return event;
     });
   }

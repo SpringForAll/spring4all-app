@@ -17,8 +17,7 @@ import {Api} from '../../providers/providers';
 })
 export class ChatPage {
 
-  datas: Array<any> = [];
-  loadError: string = ' ';
+  private datas: Array<any> = [];
   private networkErrorString: string;
 
   constructor(public translateService: TranslateService,
