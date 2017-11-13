@@ -16,7 +16,7 @@ import {User} from "../../providers/user/user";
 })
 export class ProfilePage {
 
-  private profile:any;
+  private profile: any;
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,

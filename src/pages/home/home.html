@@ -35,9 +35,9 @@
   </ion-slides>
 
   <ion-list>
-    <ion-item *ngFor="let page of pages" (click)="openPages(page.url)">
+    <ion-item *ngFor="let page of pages">
       <h3>{{page.title}}</h3>
-      <p>{{page.abstract}}</p>
+      <p (click)="openPages(page.url)">{{page.abstract}}</p>
       <div class="user-span">
         <button ion-button clear small>
           <span>{{page.time}}</span>

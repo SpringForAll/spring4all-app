@@ -89,15 +89,15 @@ export class User {
 
   getToken() {
     return this.storage.get("user").then(res => {
-      if(res){
+      if (res) {
         return res.token;
       }
     })
   }
 
-  init(){
+  init() {
     this.storage.get("user").then(res => {
-      if(res){
+      if (res) {
         this._user = res;
         this._token = res.token;
       }
