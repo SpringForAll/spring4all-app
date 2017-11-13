@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="io.ionic.starter" version="0.0.1" xmlns="http://www.w3.org/ns/widgets">
+<widget id="com.spring4all.starter" version="0.0.2" xmlns="http://www.w3.org/ns/widgets">
     <name>Spring4All</name>
     <description>Spring4All</description>
     <author email="ayanghuiqiang@gmail.com" href="http://ionicframework.com/">Spring4All</author>

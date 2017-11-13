@@ -88,18 +88,17 @@ export class User {
   }
 
   getToken() {
-    let token: string;
-    this.storage.get("user").then(res => {
-      if (res) {
-        token = res.token;
+    return this.storage.get("user").then(res => {
+      if(res){
+        return res.token;
       }
+      return null;
     })
-    return token;
   }
 
-  init() {
+  init(){
     this.storage.get("user").then(res => {
-      if (res) {
+      if(res){
         this._user = res;
         this._token = res.token;
       }
@@ -107,6 +106,17 @@ export class User {
   }
 
   refreshToken() {
+    let seq = this.api.get('login').share();
 
+    seq.subscribe((res: any) => {
+      // If the API returned a successful response, mark the user as logged in
+      if (res.success) {
+        this._loggedIn(res);
+      }
+    }, err => {
+      console.error('ERROR', err);
+    });
+
+    return seq;
   }
 }
