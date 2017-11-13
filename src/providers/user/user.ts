@@ -88,11 +88,13 @@ export class User {
   }
 
   getToken() {
-    return this.storage.get("user").then(res => {
+    let token: string;
+    this.storage.get("user").then(res => {
       if (res) {
-        return res.token;
+        token = res.token;
       }
     })
+    return token;
   }
 
   init() {
@@ -102,5 +104,9 @@ export class User {
         this._token = res.token;
       }
     })
+  }
+
+  refreshToken() {
+
   }
 }

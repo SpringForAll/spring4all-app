@@ -58,12 +58,11 @@ export class MyApp {
   }
 
   registerAuthentication() {
-    this.user.getToken().then(token => {
-      if (token) {
-        return this.rootPage = AdvertPage;
-      }
-      return this.rootPage = FirstRunPage;
-    });
+    let token = this.user.getToken();
+    if (token) {
+      return this.rootPage = AdvertPage;
+    }
+    return this.rootPage = FirstRunPage;
   }
 
   registerBackButtonAction() {
