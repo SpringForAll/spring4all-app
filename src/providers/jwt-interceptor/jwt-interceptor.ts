@@ -3,7 +3,7 @@ import 'rxjs/add/operator/map';
 import {HttpEvent, HttpHandler, HttpInterceptor, HttpRequest} from "@angular/common/http";
 import {Observable} from "rxjs/Observable";
 import {User} from "../user/user";
-import {NavController} from "ionic-angular";
+import {timeout} from "rxjs/operator/timeout";
 
 /*
   Generated class for the JwtInterceptorProvider provider.
@@ -15,19 +15,18 @@ import {NavController} from "ionic-angular";
 export class JwtInterceptorProvider implements HttpInterceptor {
   private user: User;
 
-  constructor(private inj: Injector,
-              private nav: NavController) {
+  constructor(private inj: Injector) {
     console.log('Hello JwtInterceptorProvider Provider');
   }
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     this.user = this.inj.get(User);
-
-    let JWT = this.user.getToken()
-    req = req.clone({
-      setHeaders: {
-        Authorization: JWT
-      }
+    this.user.getToken().then(token => {
+      req = req.clone({
+        setHeaders: {
+          Authorization: token
+        }
+      });
     });
     return next.handle(req).map(event => {
       /* if (event instanceof HttpResponse) {
